@@ -1,0 +1,654 @@
+/* GLOBAL */
+:root{
+    --primaryColor:rgb(59, 191, 243);
+    --primaryFontfamily : font-family: 'Abel', sans-serif,'Roboto Condensed', sans-serif,'Ubuntu', sans-serif;
+}
+.block-body {
+    font-family : /*'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/ var(--primaryFontfamily);
+    width: 95%;
+    height: auto;
+    margin: 2.5%;
+}
+/* HEADER */
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    align-items: center;
+    margin-bottom: 10px;
+    height: 150px;
+    z-index: 1;
+}
+.header-logo img {
+    height: 17%;
+}
+.sloga {
+    font-family: Bodoni MT,Goudy Old Style;
+    color: var(--primaryColor);
+    font-size: 1.3em;
+    font-weight: 800;
+}
+
+/* CAROUSSEL */
+
+.carroussel {
+    position: relative;
+    overflow: hidden;
+}
+.carroussel .images-carroussel {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 300px;
+    transition: transform 0.7s ease-in-out;
+}
+.slider-item {
+    width: 100%;
+    object-fit: cover;
+    flex-shrink: 0;  
+}
+.fleches {
+    position: absolute;
+    width: 100%;
+    top: 140px;
+    color: var(--primaryColor);
+    cursor: pointer;
+    padding-right: 10px;
+    
+}
+#fleches-right {
+    float: right;
+    padding-right: 0px;
+}
+.fleches img {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(255, 255, 255, 0.5);
+}
+
+/* NAVIGATION */
+
+#bouton-nav {
+    display: none;
+    position: absolute;
+    top: 145px;
+    right: 45px;
+    cursor: pointer;
+}
+.nav-img {
+    width: 30px;
+    height: 30px;
+}
+.nav ul {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    justify-content: space-evenly;
+    left: -40px;
+    top: 150px;
+    width: 90%;
+    list-style-type: none;
+    opacity: 1;
+    transition: opacity 0.5s;
+    z-index: 2;
+}
+.nav-style {
+    margin: 0 20px;
+    background-color: rgb(169, 202, 212,0.8);
+    font-style: normal;
+    text-decoration: none;
+    min-width: 110px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    box-shadow: 2px 2px 5px #444;
+    cursor: pointer;
+}
+.nav-style a {
+    font-style: normal;
+    text-decoration: none;
+    font-family: Bodoni MT Condensed;
+    font-size: 1.8em;
+    color: white;
+    padding: 5px;
+}
+.nav ul li:hover {
+    background-color: lightblue;
+}
+.nav ul li:first-child {
+    background-color: var(--primaryColor);
+}
+/* ACCUEIL */
+
+.message-accueil {
+    height: auto;
+}
+.biemvenue {
+    font-size : 3em;
+    font-weight: 700;
+    color: var(--primaryColor);
+    font-family: var(--primaryFontfamily),Vivaldi,'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    animation: biemvenue 4s;
+}
+.intro {
+    font-size: 1.2em;
+    font-family: Goudy Old Style,Candara Light, Candara, PMingLiU-Extb, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif,'Times New Roman', Times, serif;
+}
+.nous {
+    width: 45%;
+    height: 400px;
+    font-family: Calibri Light,Malgun Gothic Semilight, sans-serif;
+    font-size: 1.3em;
+    font-weight: 550;
+    text-align: justify;
+}
+.nous:hover {
+    animation: intro 4s;
+}
+.nous h1 {
+    font-family: Segoe UI Light,Segoe UI Light,serif;
+    font-size: 1.8em;
+    text-align: right;
+}
+.boutonensavoir {
+    margin-top: 20px; 
+    width: 40%;
+    background-color: rgb(7, 157, 216, 0.6);
+    font-style: normal;
+    text-decoration: none;
+    min-width: 110px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    box-shadow: 2px 2px 5px #444;
+    cursor: pointer;
+    transition: transform .5s;
+}
+.boutonensavoir:hover {
+    background-color: lightblue;
+    transform: scale(1.3);
+}
+.boutonensavoir a {
+    font-style: normal;
+    text-decoration: none;
+    font-family: Bodoni MT Condensed;
+    font-size: 1.2em;
+    color: white;
+    padding: 5px;
+}
+.nousimage {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+}
+.image-bienvenue {
+    width: 40%;
+    height: 400px;
+    height: auto;
+    border: solid  rgb(59, 191, 243,0.1) 7px;
+    border-radius: 10% 80% 30% 10%;
+    opacity: 0.8
+}
+.image-nous {
+    border-radius: 0% 0% 0% 0%;
+    width: 30%;
+    height: 350px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+/* PARTENAIRE */
+.titrepartenaire {
+    font-family: Goudy Old Style,Segoe UI Light,Segoe UI Light,serif;
+    font-size: 2em;
+    font-weight: 800;
+    color: var(--primaryColor);
+}
+.partenaire {
+    margin-top: 70px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content :space-around;
+    background-color:  rgb(59, 191, 243, 0.1);
+    align-items: center;
+}
+.partenaire img {
+    transition: transform ease-in-out .5s;
+}
+.partenaire img:hover {
+    transform: scale(2);
+}
+
+/* CTA */
+
+.CTA>h2 {
+    font-family: Goudy Old Style,Segoe UI Light,Segoe UI Light,serif;
+    font-size: 2em;
+    font-weight: 800;
+    color: var(--primaryColor);
+}
+.offres {
+    display: flex; 
+    justify-content: space-evenly ;
+}
+.classique {
+    position: relative;
+    background-image: url(281756.png);
+    background-repeat: no-repeat;
+    background-position: top 5px right;
+    background-size: 20%;
+    width: 25%;
+    height: 500px;
+    border: dashed var(--primaryColor) 1px;
+    padding: 1%;
+    font-family: Corbel,Bodoni MT;
+    font-size: large;
+}
+.classique li {
+    display: list-item;
+    list-style :circle;
+}
+.professionnel li {
+    display: list-item;
+    list-style :circle;
+}
+.professionnel a {
+    background-color: rgb(169, 202, 212,0.8);
+    font-style: normal;
+    text-decoration: none;
+    position: absolute;
+    bottom: 0px;
+    right: 0%;
+    left: 0%;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    box-shadow: 2px 2px 5px #444;
+    cursor: pointer;
+    font-style: normal;
+    text-decoration: none;
+    font-family: Bodoni MT Condensed;
+    font-size: 1.8em;
+    color: white;
+    padding: 5px;
+}
+.special li {
+    display: list-item;
+    list-style :circle;
+}
+.professionnel {
+    position: relative;
+    background-image: url(3972425.png);;
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 20%;
+    width: 25%;
+    height: auto;
+    border: dashed var(--primaryColor) 1px;
+    padding: 1%;
+    font-family: Corbel,Bodoni MT;
+    font-size: large;
+}
+.special {
+    position: relative;
+    background-image: url(3972425.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 20%;
+    width: 25%;
+    height: 500px;
+    border: dashed var(--primaryColor) 1px;
+    padding: 1%;
+    font-family: Corbel,Bodoni MT;
+    font-size: large;
+}
+.special a {
+    position: absolute;
+    bottom: 0px;
+    right: 0%;
+    left: 0%;
+    background-color: rgb(169, 202, 212,0.8);
+    font-style: normal;
+    text-decoration: none;
+    min-width: 110px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    box-shadow: 2px 2px 5px #444;
+    cursor: pointer;
+    font-style: normal;
+    text-decoration: none;
+    font-family: Bodoni MT Condensed;
+    font-size: 1.8em;
+    color: white;
+    padding: 5px;
+}
+.classique .bouton-basic a {
+    background-color: rgb(169, 202, 212,0.8);
+    font-style: normal;
+    text-decoration: none;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    box-shadow: 2px 2px 5px #444;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0px;
+    right: 0%;
+    left: 0%;
+    font-style: normal;
+    text-decoration: none;
+    font-family: Bodoni MT Condensed;
+    font-size: 1.8em;
+    color: white;
+    padding: 5px;
+    align-items: center;
+}
+/* ARTICLE */
+
+.titre-articles {
+    font-family: Goudy Old Style,Segoe UI Light,Segoe UI Light,serif;
+    font-size: 2em;
+    font-weight: 800;
+    color: rgb(59, 191, 243);
+    
+}
+.article {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2%;
+}
+.apprendre {
+    width: 40%;
+    font-family: Goudy Old Style,Bodoni MT Condensed;
+    font-size: 1.3em;
+}
+video {
+    width: 100%;
+}
+.connaissance {
+    width: 40%;
+    font-family: Goudy Old Style,Bodoni MT Condensed;
+    font-size: 1.2em;
+}
+.connaissance h2 {
+    font-family: Goudy Old Style,Segoe UI Light,Segoe UI Light,serif;
+    font-size: 1.2em;
+    font-weight: 800;
+    color: rgb(59, 191, 243);
+}
+.connaissance li {
+    list-style: circle;
+}
+.bouton-CTA {
+    position: relative;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+.bouton-CTA div {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    background-color: rgb(169, 202, 212,0.8);
+    font-style: normal;
+    text-decoration: none;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    box-shadow: 2px 2px 5px #444;
+    cursor: pointer;
+}
+.bouton-CTA div a {
+    font-style: normal;
+    text-decoration: none;
+    font-family: Bodoni MT Condensed;
+    font-size: 1.8em;
+    color: white;
+    padding: 5px;
+    align-items: center;
+}
+.banière-sloga {
+    font-family: Goudy Old Style,Segoe UI Light,Segoe UI Light,serif;
+    font-size: 1.2em;
+    font-weight: 800;
+    color: rgb(59, 191, 243);
+}    
+
+/* CHIFFRE */
+
+.Chiffre {
+    width: 50%;
+    height: 590px;
+    background-image: linear-gradient(to left,rgba(59, 191, 243, 0.4), rgba(7, 7, 7, 0.7) ),url(tablette.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0 80% 0 0;
+
+}
+.Chiffre td {
+    display :inline-block;
+    margin-right: 40px;
+    font-family: Goudy Old Style,Bahnschrift SemiLight SemiConde;
+    color: rgb(255, 255, 255);
+    font-size: 1.3em;
+}
+.Chiffre h2 {
+    font-family: Goudy Old Style,Segoe UI Light,Segoe UI Light,serif;
+    font-size: 2em;
+    font-weight: 800;
+    color: rgb(255, 255, 255);
+    font-family: Bahnschrift SemiLight SemiConde;
+}
+.presentation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+/* SERVICE CLIENT */
+
+.qualite {
+    width: 50%;
+    height: 590px;
+    text-align: center;
+    position: relative;
+}
+.serviceclient img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 80% 0 0 0;
+}
+.serviceclient .texteserviceclient {
+    font-family: Goudy Old Style,Segoe UI Light,Segoe UI Light,serif;
+    font-size: 3em;
+    font-weight: 800;
+    color: rgb(59, 191, 243);
+    font-family: Bahnschrift SemiLight SemiConde;
+}
+.disponible {
+    display :inline-block;
+    margin-right: 40px;
+    font-family: Goudy Old Style,Bahnschrift SemiLight SemiConde;
+    font-size: 2em;
+}
+
+/*PRESENTATION */
+
+.presentation {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0px;
+}
+
+/* FOOTER */
+
+.footer {
+    margin-top: 0px;
+    text-align: center;
+    background-image: linear-gradient(to bottom, rgba(7, 8, 8, 0.8), rgba(45, 115, 180, 0.3), rgb(0, 0, 0,0.8)  ),url(Formation-en-ligne.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.footer li {
+    display: inline-block;
+    margin-left: 3%;
+    margin-right: 3%;
+    font-size: x-large;
+    font-family: Agency FB,Bahnschrift SemiLight SemiConde;
+}
+.footer li a {
+    text-decoration: none;
+    font-size: x-large;
+    color: white;
+}
+.footer ul {
+    margin-top: 70px;
+}
+.logo-footer {
+    width: 13%;
+    border-radius: 50%;
+}
+.footer a img {
+    width: 3%;
+    border-radius: 10%;
+    margin-right: 3%;
+    margin-left: 3%;
+}
+.contact h1 {
+    font-family: Goudy Old Style,Bahnschrift SemiLight SemiConde;
+    font-size: 2em;
+    color: white;
+}
+
+@keyframes intro {
+    0% {
+        
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+        transition: ease-in-out .0.5s;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes biemvenue {
+    0% {
+        transform: scale(1.5);
+        transition:  ease-in-out 3s;
+    }
+    50% {
+        transform: scale(1.3);
+        transition:  ease-in-out 3s;
+    }
+    100% {
+        
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .article {display: block;}
+    .connaissance{width: 100%;}
+    .apprendre {
+        width: 100%; 
+        display: flex;
+        justify-content: space-between;
+    }
+    .apprendre p {width: 45%;}
+    .apprendre video {width: 45%;}
+    .article {width: 100%;}
+}
+@media screen and (max-width: 1200px) {
+    .Chiffre { width: 60%;}
+    .qualite { width: 40%;}
+}
+@media screen and (max-width: 1109px) {
+    .boutonensavoir { width: 70%;}
+}
+@media screen and (max-width: 946px) {
+    .offres {display: flex; flex-direction: column;align-items: center; align-content: space-between;}
+    .classique{ width: 80%; height: auto; background-size: 70px;}
+    .professionnel{ width: 80%; height: auto; background-size: 70px;}
+    .special{ width: 80%; height: auto; background-size: 70px;}
+    .professionnel a {position: static;}
+    .special a { position: static;}
+    .classique .bouton-basic a { position: static;}
+    .nousimage {flex-direction: column; align-items: center; justify-content: space-between;}
+    .nous {height: auto; width: 80%;}
+    .image-bienvenue{ height: 400px; width: 80%;}
+    .boutonensavoir { width: 40%;}
+}
+@media screen and (max-width: 946px) {
+    .presentation { flex-direction: column-reverse;}
+    .Chiffre { width: 100%;}
+    .qualite {width: 100%; height: auto;}
+    .serviceclient { width: 100%; display: flex; justify-content: space-between; }
+    .serviceclient img { position: static; width: 50%; height: auto; border-radius: 50% 0 0 50%;}
+    .serviceclient .texteserviceclient { width: 30%; font-size: 2em;}
+}
+@media screen and (max-width: 788px) {
+    #bouton-nav {display:block;}
+    .nav ul { 
+        opacity: 0; 
+        flex-direction: column;
+        width: 250px;
+        padding: 0;
+        top: 180px;
+        left: calc(50% - 125px);
+    }
+}
+@media screen and (min-width: 789px) {
+    .nav ul { opacity: 1 !important;}
+}
+@media screen and (max-width: 683px) {
+    .partenaire { display:flex;flex-flow: row wrap; justify-content: space-around;}
+}
+@media screen and (max-width: 683px) {
+    .apprendre { flex-direction: column; align-items: center;}
+    .apprendre p {width: 80%;}
+    .apprendre video {width: 80%;}
+}
+@media screen and (max-width: 506px) {
+    .Chiffre{ height: auto;text-align: center;}
+    .Chiffre h2{ color: var(--primaryColor); font-size: x-large;}
+    .footer a img {width: 10%;}
+    .contact h1 { font-size: large;}
+    .footer li a{ font-size: large;}
+    .footer li {margin-left: 10%; margin-right: 10%;}
+    .footer ul { margin-top: 50px; margin-right: 15%;}
+    .logo-footer { width: 20%;}
+    .Chiffre td { font-size: large; margin-top: 10px;}
+    .Chiffre img { display: none;width: 30px;}
+    .serviceclient { width: 100%; display: flex; flex-direction: column; }
+    .serviceclient img {width: 100%; height: auto; border-radius: 50% 0 0 50%;}
+    .serviceclient .texteserviceclient { width: 100%; font-size: 1.5em;}
+    .disponible {font-size: 1.5em;}
+    .bouton-CTA { width: 50%;}
+    .bouton-CTA div {margin-bottom: 7px; margin-top: 7px; height: 45px;}
+    .bouton-CTA div a {font-size: 1.3em;padding: 5px;}
+    .h2{ font-size: x-large;}
+    .apprendre p { font-size: large;}
+    .article h2 { font-size: x-large;}
+    .nous{ font-size: large;}
+    .nous h1 { font-size: x-large;}
+    .image-bienvenue { height: auto;}
+    .professionnel li { font-size: large;}
+    .biemvenue { font-size: x-large;}
+    .carroussel { height: 250px; margin-top: 20px;}
+    .fleches { top: 110px;}
+    .sloga { font-size: small; width: 100%; padding-right: 15px;}
+    .header {flex-direction: column; height: 150px;}
+    .header-logo { width: 100%;}
+    .header-logo img {width: 60px; height: 70px;}
+    .block-body { width:98%;}
+}
+
+
