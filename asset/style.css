@@ -600,6 +600,7 @@ video {
         opacity: 0; 
         flex-direction: column;
         width: 250px;
+        height: auto;
         padding: 0;
         top: 180px;
         left: calc(50% - 125px);
